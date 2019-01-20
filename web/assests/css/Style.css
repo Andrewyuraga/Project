@@ -1,0 +1,635 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Suez+One');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #fafafa;
+    font-family: Trebuchet MS, Helvetica;
+}
+
+/* Шапка сайта */
+
+header {
+    width: 100%;
+    padding: 10px 0.5% 0px 0.5%;
+    background: transparent;
+    float: left;
+    position: fixed;
+}
+
+header #logo {
+    color: #fff;
+    cursor: pointer;
+}
+
+header #logo span {
+    font-size: 1.7em;
+    line-height: 45px;
+    margin-left: 40px;
+    font-family: 'Suez One', serif;
+}
+
+@media (min-width: 701px) {
+    #logo {
+        float: left;
+        width: 30%;
+        font-size: 1.1em;
+    }
+
+    #about {
+        float: right;
+        width: 67%;
+    }
+}
+
+@media (max-width: 700px) {
+    #logo {
+        margin-top: 15px;
+        width: 100%;
+        font-size: 1.5em;
+    }
+
+    #about {
+        float: left;
+        width: 100%;
+    }
+}
+
+#about {
+    text-align: center;
+    font-size: 1em;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+
+#about > a {
+    color: #fff
+}
+
+#about > a:hover {
+    color: #b0b0b0;
+    text-decoration: underline;
+}
+
+#about > a:not(:last-child) {
+    margin-right: 7%;
+}
+
+/* Стили для фиксирования шапки */
+
+.fixed {
+    z-index: 5000;
+    background-color: #fff;
+    border-bottom: 1px solid silver;
+}
+
+header.fixed #logo {
+    color: #343434;
+}
+
+.fixed #about a {
+    color: #343434
+}
+
+.fixed #about a:hover {
+    color: #7c7c7c
+}
+
+/* Главный блок на сайте */
+
+#top {
+    width: 100%;
+    background-image: url(https://avatars.mds.yandex.net/get-pdb/202366/1d12b5e8-fa3a-42b0-93bc-007d68ee606b/s1200);
+    background-blend-mode: multiply;
+    background-color: #2e3a44;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    font-size: 3em;
+}
+
+@media (min-width: 1001px) {
+    #top {
+        font-size: 3em;
+        height: 1000px;
+    }
+}
+
+@media (max-width: 1000px)  and (min-width: 651px) {
+    #top {
+        font-size: 2em;
+        height: 600px;
+    }
+}
+
+@media (max-width: 650px) {
+    #top {
+        font-size: 1.3em;
+        padding-top: 50%;
+        height: 500px;
+    }
+}
+
+#top h1 {
+    padding-top: 20%;
+}
+
+#top h3 {
+    color: #ccc;
+}
+
+/* Блок с товарами */
+
+#top {
+    width: 100%;
+    background-image: url(https://avatars.mds.yandex.net/get-pdb/202366/1d12b5e8-fa3a-42b0-93bc-007d68ee606b/s1200);
+    background-blend-mode: multiply;
+    background-color: #2e3a44;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    font-size: 3em;
+    margin-bottom: auto;
+}
+
+@media (min-width: 1001px) {
+    #top {
+        font-size: 3em;
+        height: 1000px;
+    }
+}
+
+@media (max-width: 1000px)  and (min-width: 651px) {
+    #top {
+        font-size: 2em;
+        height: 600px;
+    }
+}
+
+@media (max-width: 650px) {
+    #top {
+        font-size: 1.3em;
+        padding-top: 50%;
+        height: 500px;
+    }
+}
+
+#top h1 {
+    padding-top: 20%;
+}
+
+#top h3 {
+    color: #ccc;
+}
+
+/* Блок с товарами */
+
+#main h5 {
+    margin-top: 2%;
+    font-size: 3em;
+    color: #4f4f4f;
+    font-family: "Robot Slab", serif;
+    font-weight: lighter;
+}
+
+#main h6 {
+    font-size: 1.1em;
+    color: #4f4f4f;
+    font-family: "Robot Slab", serif;
+    font-weight: lighter;
+}
+
+.product-wrapper {
+    display: block;
+    height: 60%;
+    margin-top: 2%;
+    margin-bottom: 10%;
+    width: 100%;
+    float: left;
+}
+
+@media only screen and (min-width: 450px) {
+    .product-wrapper {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .product-wrapper {
+        width: 33.333%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .product-wrapper {
+        width: 25%;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.product-item {
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
+    border-bottom: 2px solid #F5F5F5;
+    background: white;
+    font-family: "Open Sans";
+    transition: .3s ease-in;
+}
+
+.product-item:hover {
+    border-bottom: 2px solid #fc5a5a;
+}
+
+.product-item img {
+    display: block;
+    width: 100%;
+}
+
+.product-list {
+    background: #fafafa;
+    padding: 15px 0;
+}
+
+.product-list h3 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #444444;
+    margin: 0 0 3px 0;
+}
+
+.id {
+    font-size: 16px;
+    display: block;
+    margin-bottom: auto;
+    text-align: center;
+    width: 300px;
+}
+
+.price {
+    font-size: 16px;
+    color: #fc5a5a;
+    display: block;
+    margin-bottom: 12px;
+    text-align: center;
+    width: 300px;
+}
+
+.button {
+    margin-top: 10px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 12px;
+    background: #d6888c;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 20px;
+    transition: .3s ease-in;
+}
+
+.product-item:hover .button {
+    background: #cd1925;
+}
+
+.review {
+    width: 300px;
+    background: #9affe8;
+    padding: 5px;
+    padding-right: 25px;
+    border: solid 1px orange;
+    float: right;
+}
+
+/* Блок категорий */
+
+#overiew {
+    float: left;
+    background-image: url(https://www.mercedes-benz.com/wp-content/uploads/sites/2/2017/06/Mercedes-AMG-C-43-4MATIC-Wallpaper-01.zip.extracted/01-mercedes-amg-c-43-4matic-cabriolet-a-205-wallpaper-1920x1080.jpg);
+    background-blend-mode: multiply;
+    background-color: #d8d8d8;
+    background-size: cover;
+    background-attachment: fixed;
+
+    padding: 100px 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+#overiew h2 {
+    font-size: 4em;
+}
+
+#overiew h4 {
+    color: #ccc;
+    font-size: 1.5em;
+}
+
+#overiew .img {
+    float: left;
+    width: 30%;
+    margin-right: 5%;
+    margin-top: 50px;
+}
+
+#overiew .img:nth-child(odd) {
+    margin-left: 18%;
+}
+
+#overiew img {
+    background: #fafafa;
+    padding: 5px;
+    border: 2px solid silver;
+    float: left;
+    width: 100%;
+    max-width: 500px;
+}
+
+#overiew span {
+    float: left;
+    width: 100%;
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+@media (max-width: 700px) {
+    #overiew .img {
+        width: 80% !important;
+        font-size: 0 !important;
+        margin-top: 10px !important;
+    }
+}
+
+/* Кабинет пользователя */
+
+#contacts {
+    width: 100%;
+    float: left;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    border-top: 4px solid #ccc;
+    background: #f4f4f4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Robot Slab", serif;
+    font-weight: lighter;
+}
+
+#contacts h1, h2, h3, h4, h5, h6, p {
+    font-family: "Robot Slab", serif;
+    font-weight: normal;
+    text-align: center;
+}
+
+#contacts h5 {
+    font-size: 3em;
+    color: #4f4f4f;
+}
+
+#form_input {
+    margin-top: 15px;
+    width: 30%;
+    margin-left: 40%;
+    font-size: 1.1em;
+}
+
+#form_input label {
+    color: #505050;
+    cursor: pointer;
+    font-size: 1.4em;
+    font-family: "Robot Slab", serif;
+}
+
+#form_input label > span {
+    color: #e87e7e;
+}
+
+#form_input input {
+    margin-bottom: 10px;
+    width: 70%;
+    padding: 10px 2%;
+    border-radius: 7px;
+    border: 2px solid silver;
+    font-size: 0.9em;
+    color: #4a4a4a;
+}
+
+#form_input input:focus {
+    border-color: #333;
+}
+
+.btn {
+    border-radius: 9px;
+    padding: 2px 7px;
+    font-size: 1.2em;
+    background-color: #878d8d;
+    text-shadow: #454545 0 0 2px;
+    cursor: pointer;
+    color: white;
+    font-family: "Robot Slab", serif;
+
+}
+
+.btn {
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #6088ff;
+}
+
+.emailEntrance {
+    margin-bottom: 10px;
+    width: 70%;
+    padding: 10px 2%;
+    border-radius: 7px;
+    border: 2px solid silver;
+    font-size: 0.9em;
+    color: #4a4a4a;
+}
+
+/* Вопросы и ответы */
+
+#faq {
+    background-color: #fff;
+    border-top: 2px dashed #e4e3e3;
+    width: 100%;
+    float: left;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+@media (min-width: 801px) {
+    #faq div {
+        width: 25%;
+        margin-left: 6%;
+        float: left;
+    }
+}
+
+@media (max-width: 800px) {
+    #faq div {
+        width: 80%;
+        margin-left: 10%;
+        float: left;
+    }
+}
+
+#faq div {
+    width: 25%;
+    margin-left: 6%;
+    float: left;
+}
+
+#faq .title {
+    font-weight: lighter;
+    color: #a3a0ad;
+    margin-bottom: 20px;
+    font-size: 2.2em;
+}
+
+#faq .heading {
+    color: #7d7d7d;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+#faq p {
+    font-family: Arimo, Helvetica, san-sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #4a4a4a;
+    font-size: 0.95em;
+    margin-bottom: 40px;
+}
+
+/* Таблица заказов пользователя */
+
+table {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 14px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th, td:first-child {
+    background: rgba(130, 130, 136, 0.92);
+    color: #ffffff;
+    padding: 10px 20px;
+}
+
+th, td {
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: white;
+}
+
+td {
+    background: rgba(135, 141, 141, 0.15);
+}
+
+th:first-child, td:first-child {
+    text-align: left;
+}
+
+/* Нижнее меню */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+
+#menu {
+    background-color: #000000;
+    border-top: 1px dashed #fff;
+    width: 100%;
+    float: left;
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+.menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    max-width: 720px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin: 0 auto;
+    height: 5vh;
+    list-style: none;
+}
+
+.menu li {
+    width: 120px;
+    height: 70px;
+    -webkit-transition: background-position-x 0.9s linear;
+    transition: background-position-x 0.9s linear;
+    text-align: center;
+}
+
+.menu li a {
+    font-size: 22px;
+    color: #777;
+    text-decoration: none;
+    -webkit-transition: all 0.45s;
+    transition: all 0.45s;
+}
+
+.menu li:hover {
+    background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEi%0D%0AIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhs%0D%0AaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB3aWR0%0D%0AaD0iMzkwcHgiIGhlaWdodD0iNTBweCIgdmlld0JveD0iMCAwIDM5MCA1MCIgZW5hYmxlLWJhY2tn%0D%0Acm91bmQ9Im5ldyAwIDAgMzkwIDUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZmlsbD0i%0D%0Abm9uZSIgc3Ryb2tlPSIjZDk0ZjVjIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLW1pdGVybGlt%0D%0AaXQ9IjEwIiBkPSJNMCw0Ny41ODVjMCwwLDk3LjUsMCwxMzAsMAoJYzEzLjc1LDAsMjguNzQtMzgu%0D%0ANzc4LDQ2LjE2OC0xOS40MTZDMTkyLjY2OSw0Ni41LDI0My42MDMsNDcuNTg1LDI2MCw0Ny41ODVj%0D%0AMzEuODIxLDAsMTMwLDAsMTMwLDAiLz4KPC9zdmc+Cg==");
+    -webkit-animation: line 1s;
+    animation: line 1s;
+}
+
+.menu li:hover a {
+    color: #d94f5c;
+}
+
+.menu li:not(:last-child) {
+    margin-right: 65px;
+}
+
+@-webkit-keyframes line {
+    0% {
+        background-position-x: 390px;
+    }
+}
+
+@keyframes line {
+    0% {
+        background-position-x: 390px;
+    }
+}
+
+/* Блок отзывов */
+
+.revw {
+    display: block;
+    align-content: center;
+    border-style: dotted;
+}
+
+.revw h5 {
+    font-size: 15px;
+}
+
+.revw h3 {
+    font-size: 25px;
+    font-family: "Robot Slab", serif;
+}
+
